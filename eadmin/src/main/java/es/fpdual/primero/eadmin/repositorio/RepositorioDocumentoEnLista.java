@@ -39,6 +39,9 @@ public class RepositorioDocumentoEnLista implements RepositorioDocumento {
 
 	@Override
 	public void eliminarDocumento(int codigoDocumento) {
+		
+		
+		
 		//solucion 1
 		Documento documentoAEliminar = new
 				Documento(codigoDocumento, null, null, null, null);
