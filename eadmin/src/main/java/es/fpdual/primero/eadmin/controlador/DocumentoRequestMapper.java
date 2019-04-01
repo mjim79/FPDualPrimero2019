@@ -12,10 +12,10 @@ public class DocumentoRequestMapper {
 
 	public static Documento toDocumento(DocumentoRequest documentoRequest) {
 		
-		return new Documento(documentoRequest.getId(),
+		return new Documento(0,
 				documentoRequest.getNombre(),
 				construyeUsuario(documentoRequest), 
-				documentoRequest.getFechaCreacion(),
+				null,
 				construyeTipoDocumento(documentoRequest.getTipoDocumento()));
 	}
 
@@ -47,9 +47,9 @@ public class DocumentoRequestMapper {
 	}
 
 	private static Usuario construyeUsuario(DocumentoRequest documentoRequest) {
-		return new Usuario(documentoRequest.getId(),
-				"usuario"+documentoRequest.getId(),
-				"cargo"+documentoRequest.getId());
+		return new Usuario(Integer.parseInt(documentoRequest.getUsuario()),
+				"usuario"+documentoRequest.getUsuario(),
+				"cargo"+documentoRequest.getUsuario());
 	}
 	
 	
