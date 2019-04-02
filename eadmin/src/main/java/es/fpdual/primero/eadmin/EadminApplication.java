@@ -18,18 +18,6 @@ public class EadminApplication {
 
 	public static void main(String[] args) {
 		
-		final Usuario usuario = new Usuario(4, "bob", "chef");
-		final Date fecha = new Date();
-		
-		
-		final DocumentoContable documentoContable = new DocumentoContable(10, "operacion contable", usuario
-						, fecha, "10005756468461356");
-		
-		final Documento documento = new DocumentoContable(15, "operacion", usuario
-				, fecha, "99999999999955574");
-		
-
-		
 		SpringApplication.run(EadminApplication.class, args);
 	}
 

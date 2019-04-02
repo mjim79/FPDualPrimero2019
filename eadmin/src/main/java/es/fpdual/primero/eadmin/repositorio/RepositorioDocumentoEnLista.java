@@ -73,6 +73,14 @@ public class RepositorioDocumentoEnLista implements RepositorioDocumento {
 		}
 		return documentos.get(documentos.size()-1).getId() +1;
 	}
+
+	@Override
+	public Documento obtenerDocumentoPorId(int codigoDocumento) {
+		
+		return documentos.stream().
+				filter(d-> d.getId()==codigoDocumento).
+				findFirst().orElse(null);
+	}
 	
 	
 

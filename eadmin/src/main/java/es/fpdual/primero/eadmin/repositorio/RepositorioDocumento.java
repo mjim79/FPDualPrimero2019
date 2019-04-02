@@ -10,5 +10,6 @@ public interface RepositorioDocumento {
 	public void eliminarDocumento(int codigoDocumento);
 	public List<Documento> obtenerTodosDocumentos();
 	public int getSiguienteId();
+	public Documento obtenerDocumentoPorId(int codigoDocumento);
 	
 }
